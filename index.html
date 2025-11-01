@@ -1,181 +1,227 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dan Romeo — Digital Marketing & Product Strategy</title>
+  <meta name="description" content="Digital marketing & product strategy leader blending audience segmentation, web analytics, and innovation to drive measurable growth." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dan Romeo — Digital Marketing & Product Strategy" />
+  <meta property="og:description" content="Audience segmentation • Web analytics • Product strategy • Innovation" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://danromeo.com" />
+  <meta name="color-scheme" content="light dark" />
+
+  <style>
+    :root {
+      --bg: #0f1521;
+      --fg: #e8edf6;
+      --muted: #aeb7c7;
+      --accent: #61d5d3;
+      --accent-2: #ff7a59;
+      --card: #151c2b;
+      --border: #24314a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(1200px 600px at 10% -10%, #172035 0%, transparent 60%), var(--bg);
+      color: var(--fg);
+      line-height: 1.55;
+    }
+
+    a { color: var(--fg); text-decoration: none; }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    .logo { display: inline-flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .2px; }
+
+    .monogram {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #0f1521;
+      font-weight: 800;
+      font-size: 22px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 36px; }
+
+    .links a {
+      opacity: .9;
+      margin-left: 16px;
+      padding: 8px 0;
+      border-bottom: 1px solid transparent;
+    }
+
+    .links a:hover { border-color: var(--accent); }
+
+    .hero { margin-top: 12px; margin-bottom: 28px; }
+    .title { font-size: clamp(28px, 5vw, 42px); font-weight: 800; line-height: 1.12; letter-spacing: .1px; }
+    .subtitle { margin-top: 10px; color: var(--muted); font-size: clamp(16px, 2.5vw, 18px); }
+
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, #18223a, #121a2c);
+    }
+    .btn:hover { border-color: var(--accent); box-shadow: 0 0 0 3px rgb(97 213 211 / 0.15); }
+    .btn.secondary { background: transparent; }
+    .btn .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 3px rgb(97 213 211 / 0.15);
+    }
+
+    section { margin-top: 40px; }
+    .grid { display: grid; gap: 16px; }
+    @media (min-width: 800px) {
+      .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+      .grid.cols-2 { grid-template-columns: 1fr 1fr; }
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--card), #0f1521);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+    }
+    .card h3 { margin: 0 0 6px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    .pill {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #121a2c;
+      color: var(--fg);
+      font-size: 13px;
+      margin: 4px 6px 0 0;
+    }
+
+    footer {
+      margin-top: 52px;
+      padding-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      border-top: 1px dashed var(--border);
+    }
   </style>
 </head>
+
 <body>
-<p class="p1">&lt;!doctype html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Dan Romeo — Digital Marketing &amp; Product Strategy&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Digital marketing &amp; product strategy leader blending audience segmentation, web analytics, and innovation to drive measurable growth." /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Open Graph --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta property="og:title" content="Dan Romeo — Digital Marketing &amp; Product Strategy" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta property="og:description" content="Audience segmentation • Web analytics • Product strategy • Innovation" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta property="og:type" content="website" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta property="og:url" content="https://danromeo.com" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="color-scheme" content="light dark" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--bg: #0f1521;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--fg: #e8edf6;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--muted: #aeb7c7;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--accent: #61d5d3;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--accent-2: #ff7a59;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--card: #151c2b;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--border: #24314a;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>* { box-sizing: border-box; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: radial-gradient(1200px 600px at 10% -10%, #172035 0%, transparent 60%), var(--bg);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--fg); line-height: 1.55;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>a { color: var(--fg); text-decoration: none; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.wrap { max-width: 980px; margin: 0 auto; padding: 48px 20px 80px; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.logo { display: inline-flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .2px; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.monogram {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, var(--accent), var(--accent-2));</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #0f1521; font-weight: 800; font-size: 22px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header { display:flex; justify-content: space-between; align-items:center; margin-bottom: 36px; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.links a { opacity:.9; margin-left:16px; padding:8px 0; border-bottom:1px solid transparent; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.links a:hover { border-color: var(--accent); }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero { margin-top: 12px; margin-bottom: 28px; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.title { font-size: clamp(28px, 5vw, 42px); font-weight: 800; line-height:1.12; letter-spacing:.1px; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.subtitle { margin-top: 10px; color: var(--muted); font-size: clamp(16px, 2.5vw, 18px); }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.cta { display:flex; flex-wrap:wrap; gap:12px; margin-top: 20px; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:inline-flex; align-items:center; gap:10px; padding:10px 16px; border-radius:12px; border:1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(180deg, #18223a, #121a2c);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn:hover { border-color: var(--accent); box-shadow: 0 0 0 3px rgb(97 213 211 / 0.15); }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn.secondary { background: transparent; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn .dot { width:8px; height:8px; border-radius:50%; background: var(--accent); box-shadow:0 0 0 3px rgb(97 213 211 / 0.15); }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>section { margin-top: 40px; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.grid { display:grid; gap:16px; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>@media(min-width:800px){ .grid.cols-3 { grid-template-columns: repeat(3, 1fr); } .grid.cols-2{ grid-template-columns: 1fr 1fr; } }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(180deg, var(--card), #0f1521);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border); border-radius: 16px; padding: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card h3 { margin:0 0 6px; font-size: 18px; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card p { margin:0; color: var(--muted); font-size: 15px; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.pill {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background:#121a2c; color: var(--fg); font-size: 13px; margin:4px 6px 0 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer { margin-top: 52px; padding-top: 18px; color: var(--muted); font-size:14px; border-top:1px dashed var(--border); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="logo"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="monogram"&gt;dR&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;Dan&amp;nbsp;Romeo&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;nav class="links" aria-label="Top links"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="mailto:hello@danromeo.com"&gt;Email&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="https://www.linkedin.com/in/danromeo" target="_blank" rel="noopener"&gt;LinkedIn&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="/Dan_Romeo_Resume.pdf" target="_blank" rel="noopener"&gt;Resume&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;main&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;section class="hero"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 class="title"&gt;Digital Marketing &amp; Product Strategy&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="subtitle"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>I connect audience segmentation, web analytics, and product thinking to drive measurable growth.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>Passionate about emerging tech and practical innovation that improves customer experience.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cta"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn" href="mailto:hello@danromeo.com"&gt;&lt;span class="dot"&gt;&lt;/span&gt; Get in touch&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn secondary" href="https://www.linkedin.com/in/danromeo" target="_blank" rel="noopener"&gt;Connect on LinkedIn&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid cols-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Digital Marketing Strategy&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Turning audience insights and analytics into focused plans that drive acquisition, engagement, and retention.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Audience Segmentation&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Designing taxonomies and segments that improve relevance and help teams activate the right message for the right users.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Web Analytics &amp; Measurement&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Building KPI frameworks and experimentation loops to tie product and marketing work to outcomes.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="margin-top:10px;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="pill"&gt;Segmentation&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="pill"&gt;Conversion &amp; Funnels&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="pill"&gt;Experimentation&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="pill"&gt;Customer Journeys&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="pill"&gt;Data Platforms&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="pill"&gt;Emerging Tech&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid cols-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Audience Insights Platform&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Defined a next-gen internal insights tool surfacing engagement and overlap trends to inform targeting strategy and account planning.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Intent Targeting MVP&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Delivered an MVP that recommended high-intent taxonomy groups and enabled activation, improving targeting efficiency and clarity of results.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Web Engagement Optimization&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Shipped auth and save-for-later enhancements that reduced friction and increased measurable session depth for signed-in users.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Data &amp; Measurement Foundations&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Partnered with data teams to align metrics, create curated datasets, and build transparent reporting for product and marketing decisions.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;About Dan&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>I’m a product-minded digital marketer who bridges strategy, data, and execution. My background spans</p>
-<p class="p1"><span class="Apple-converted-space">            </span>audience segmentation, web analytics, and building data-driven features that connect insight to impact.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>I enjoy pragmatic innovation—shipping the smallest thing that proves value, then scaling what works.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;© &lt;span id="y"&gt;&lt;/span&gt; Dan Romeo · &lt;a href="mailto:hello@danromeo.com"&gt;hello@danromeo.com&lt;/a&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;document.getElementById('y').textContent = new Date().getFullYear();&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="monogram">dR</div>
+        <div>Dan&nbsp;Romeo</div>
+      </div>
+      <nav class="links" aria-label="Top links">
+        <a href="mailto:hello@danromeo.com">Email</a>
+        <a href="https://www.linkedin.com/in/danromeo" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="/Dan_Romeo_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1 class="title">Digital Marketing & Product Strategy</h1>
+        <p class="subtitle">
+          I connect audience segmentation, web analytics, and product thinking to drive measurable growth.
+          Passionate about emerging tech and practical innovation that improves customer experience.
+        </p>
+        <div class="cta">
+          <a class="btn" href="mailto:hello@danromeo.com"><span class="dot"></span> Get in touch</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/danromeo" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        </div>
+      </section>
+
+      <section>
+        <div class="grid cols-3">
+          <div class="card">
+            <h3>Digital Marketing Strategy</h3>
+            <p>Turning audience insights and analytics into focused plans that drive acquisition, engagement, and retention.</p>
+          </div>
+          <div class="card">
+            <h3>Audience Segmentation</h3>
+            <p>Designing taxonomies and segments that improve relevance and help teams activate the right message for the right users.</p>
+          </div>
+          <div class="card">
+            <h3>Web Analytics & Measurement</h3>
+            <p>Building KPI frameworks and experimentation loops to tie product and marketing work to outcomes.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:10px;">
+          <span class="pill">Segmentation</span>
+          <span class="pill">Conversion & Funnels</span>
+          <span class="pill">Experimentation</span>
+          <span class="pill">Customer Journeys</span>
+          <span class="pill">Data Platforms</span>
+          <span class="pill">Emerging Tech</span>
+        </div>
+      </section>
+
+      <section>
+        <div class="grid cols-2">
+          <div class="card">
+            <h3>Audience Insights Platform</h3>
+            <p>Defined a next-gen internal insights tool surfacing engagement and overlap trends to inform targeting strategy and account planning.</p>
+          </div>
+          <div class="card">
+            <h3>Intent Targeting MVP</h3>
+            <p>Delivered an MVP that recommended high-intent taxonomy groups and enabled activation, improving targeting efficiency and clarity of results.</p>
+          </div>
+          <div class="card">
+            <h3>Web Engagement Optimization</h3>
+            <p>Shipped auth and save-for-later enhancements that reduced friction and increased measurable session depth for signed-in users.</p>
+          </div>
+          <div class="card">
+            <h3>Data & Measurement Foundations</h3>
+            <p>Partnered with data teams to align metrics, create curated datasets, and build transparent reporting for product and marketing decisions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <h3>About Dan</h3>
+          <p>
+            I’m a product-minded digital marketer who bridges strategy, data, and execution. My background spans
+            audience segmentation, web analytics, and building data-driven features that connect insight to impact.
+            I enjoy pragmatic innovation—shipping the smallest thing that proves value, then scaling what works.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="y"></span> Dan Romeo · <a href="mailto:hello@danromeo.com">hello@danromeo.com</a></div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
-</html> 
+</html>
