@@ -4,77 +4,109 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dan Romeo — Digital Growth & Product Strategy</title>
-  <meta name="description" content="Digital growth built on clarity, audience insight, and practical innovation.">
+  <meta name="description" content="I help brands connect with the right people, convert them into customers, and turn those customers into loyal fans. I bring together experience in marketing, product, and audience strategy with a curiosity for how technology and AI can shape the next wave of customer experiences.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
   <style>
-    :root {
-      --bg: #0b0f1a;      /* deep ink */
-      --fg: #eef3ff;      /* near-white */
-      --muted: #a7b0c6;
-      --border: #1e2a44;
-      --accent: #64e1ff;
-      --accent-2: #9f7cff;
-      --card: #101627;
+    :root{
+      /* Colors */
+      --bg-1:#0b0f1a;
+      --bg-2:#0e1526;
+      --fg:#eef3ff;
+      --muted:#a7b0c6;
+      --border:#1e2a44;
+      --accent:#64e1ff;
+      --accent-2:#9f7cff;
+
+      /* Layout */
+      --wrap:1000px;
+      --radius:16px;
     }
-    * { box-sizing: border-box; }
-    html, body { margin:0; padding:0; }
-    body {
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       color: var(--fg);
-      background: linear-gradient(180deg, #0e1526 0%, var(--bg) 100%);
+      background:
+        radial-gradient(900px 600px at 10% -10%, rgba(159,124,255,.12), transparent 60%),
+        radial-gradient(700px 500px at 90% 10%, rgba(100,225,255,.10), transparent 65%),
+        linear-gradient(180deg, var(--bg-2), var(--bg-1));
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-    a { color: var(--fg); text-decoration: none; }
-    .wrap { max-width: 980px; margin: 0 auto; padding: 48px 20px 80px; }
+    a{ color:var(--fg); text-decoration:none; }
 
-    header { display:flex; align-items:center; justify-content:space-between; margin-bottom: 32px; }
-    .brand { display:flex; align-items:center; gap:12px; font-weight:800; }
-    .mark {
+    .wrap{ max-width: var(--wrap); margin: 0 auto; padding: 48px 20px 84px; }
+
+    header{ display:flex; align-items:center; justify-content:space-between; margin-bottom: 32px; }
+    .brand{ display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px; }
+    .mark{
       width:44px; height:44px; border-radius:12px; display:grid; place-items:center;
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
       color:#0b0f1a; font-weight:900;
+      box-shadow: 0 10px 22px rgba(100,225,255,.18);
     }
-    nav a { margin-left:18px; padding:8px 0; border-bottom:1px solid transparent; }
-    nav a:hover { border-color: var(--accent); }
+    nav a{ margin-left:18px; padding:8px 0; border-bottom:1px solid transparent; opacity:.95; }
+    nav a:hover{ border-color: var(--accent); }
 
-    .hero { margin: 8px 0 28px; }
-    .eyebrow {
+    /* HERO */
+    .hero{ margin: 6px 0 26px; }
+    .eyebrow{
       display:inline-flex; align-items:center; gap:10px; padding:6px 10px;
-      border:1px solid var(--border); border-radius:999px; color: var(--muted);
+      border:1px solid var(--border); border-radius:999px; color:var(--muted);
       background: rgba(15,22,39,.6); font-size:13px;
     }
-    .dot { width:8px; height:8px; border-radius:50%; background: var(--accent); }
+    .dot{ width:8px; height:8px; border-radius:50%; background: var(--accent); }
 
-    .title { font-size: clamp(28px, 5.8vw, 50px); line-height:1.1; font-weight:800; margin:14px 0 10px; }
-    .subtitle { color: var(--muted); font-size: clamp(16px, 2.5vw, 18px); max-width: 62ch; }
+    .title{
+      font-size: clamp(28px, 4.2vw, 38px);
+      line-height: 1.25;
+      font-weight: 800;
+      margin: 12px 0 10px;
+      max-width: 780px;            /* keeps lines from getting too long */
+      text-wrap: balance;           /* nicer line breaks on modern browsers */
+    }
 
-    .cta { display:flex; flex-wrap:wrap; gap:12px; margin-top: 20px; }
-    .btn {
+    .subtitle{
+      color: var(--muted);
+      font-size: clamp(18px, 2.4vw, 20px);
+      line-height: 1.55;
+      max-width: 760px;             /* close to title width for harmony */
+      margin-top: 8px;
+      text-wrap: balance;
+    }
+
+    .cta{ display:flex; flex-wrap:wrap; gap:12px; margin-top: 20px; }
+    .btn{
       display:inline-flex; align-items:center; gap:10px; padding:11px 16px; border-radius:12px;
       border:1px solid var(--border); background: linear-gradient(180deg, #14213a, #0f1a31);
     }
-    .btn:hover { border-color: var(--accent); }
-    .btn.secondary { background: transparent; }
+    .btn:hover{ border-color: var(--accent); box-shadow: 0 0 0 3px rgba(100,225,255,.18); }
+    .btn.secondary{ background: transparent; box-shadow:none; }
 
-    section { margin-top: 40px; }
-    .grid { display:grid; gap:16px; }
-    @media (min-width: 860px) { .cols-3 { grid-template-columns: repeat(3, 1fr); } .cols-2 { grid-template-columns: 1fr 1fr; } }
+    /* SECTIONS */
+    section{ margin-top: 42px; }
+    .grid{ display:grid; gap:16px; }
+    @media (min-width: 860px){ .cols-3{ grid-template-columns: repeat(3, 1fr); } .cols-2{ grid-template-columns: 1fr 1fr; } }
 
-    .card {
+    .card{
       background: linear-gradient(180deg, rgba(16,22,39,.96), rgba(11,15,26,.96));
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius: var(--radius);
       padding: 18px;
     }
-    .card h3 { margin: 0 0 6px; font-size: 18px; }
-    .card p { margin: 0; color: var(--muted); font-size: 15px; }
+    .card h3{ margin:0 0 6px; font-size:18px; }
+    .card p{ margin:0; color:var(--muted); font-size:15px; }
 
-    .pill {
+    .pill{
       display:inline-block; padding:6px 10px; border-radius:999px;
       border:1px solid var(--border); background:#0e1a30; color:var(--fg); font-size:13px; margin:4px 6px 0 0;
     }
 
-    footer { margin-top: 52px; padding-top: 16px; color: var(--muted); font-size: 14px; border-top:1px dashed var(--border); }
+    footer{ margin-top: 54px; padding-top: 16px; color: var(--muted); font-size:14px; border-top:1px dashed var(--border); }
   </style>
 </head>
 <body>
@@ -93,8 +125,12 @@
     <main>
       <section class="hero">
         <span class="eyebrow"><span class="dot"></span> Digital Growth & Product Strategy</span>
-        <h1 class="title">I help brands connect with the right people, convert them into customers, and turn those customers into loyal fans.</h1>
+
+        <!-- Prevent orphan by using a non-breaking space before 'fans' -->
+        <h1 class="title">I help brands connect with the right people, convert them into customers, and turn those customers into loyal&nbsp;fans.</h1>
+
         <p class="subtitle">I bring together experience in marketing, product, and audience strategy with a curiosity for how technology and AI can shape the next wave of customer experiences.</p>
+
         <div class="cta">
           <a class="btn" href="mailto:hello@danromeo.com"><span class="dot"></span> Get in touch</a>
           <a class="btn secondary" href="https://www.linkedin.com/in/danromeo" target="_blank" rel="noopener">Connect on LinkedIn</a>
@@ -105,11 +141,11 @@
         <div class="grid cols-3">
           <div class="card">
             <h3>Growth Strategy</h3>
-            <p>Clarity over noise. I help teams focus on what matters, test fast, and scale what actually works.</p>
+            <p>Clarity over noise. Focus on what matters, test fast, and scale what actually works.</p>
           </div>
           <div class="card">
             <h3>Audience Intelligence</h3>
-            <p>Turning audience insight into direction. Who they are, what they need, and where to meet them.</p>
+            <p>Turn audience insight into action. Who they are, what they need, and where to meet them.</p>
           </div>
           <div class="card">
             <h3>Measurement that Matters</h3>
@@ -122,7 +158,7 @@
           <span class="pill">Experimentation</span>
           <span class="pill">Identity & Auth</span>
           <span class="pill">Product-led Growth</span>
-          <span class="pill">Emerging Tech</span>
+          <span class="pill">AI & Emerging Tech</span>
         </div>
       </section>
 
