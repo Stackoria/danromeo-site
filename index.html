@@ -4,34 +4,157 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dan Romeo — Digital Growth & Product Strategy</title>
-  <meta name="description" content="Digital growth built on clarity, data, and a little common sense.">
+  <meta name="description" content="Digital growth built on clarity, audience insight, and practical innovation.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg:#0b0f1a;
-      --fg:#eef3ff;
-      --muted:#a7b0c6;
-      --accent:#64e1ff;
-      --accent-2:#9f7cff;
-      --border:#1e2a44;
-      --card:#101627;
+      --bg: #0b0f1a;      /* deep ink */
+      --fg: #eef3ff;      /* near-white */
+      --muted: #a7b0c6;
+      --border: #1e2a44;
+      --accent: #64e1ff;
+      --accent-2: #9f7cff;
+      --card: #101627;
     }
-    *{box-sizing:border-box;}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-      color:var(--fg);
-      background:
-        radial-gradient(900px 600px at 10% -10%,rgba(111,123,255,.12),transparent 60%),
-        radial-gradient(700px 500px at 90% 10%,rgba(110,224,255,.1),transparent 65%),
-        linear-gradient(180deg,#0e1526,var(--bg));
-      line-height:1.6;
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; }
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--fg);
+      background: linear-gradient(180deg, #0e1526 0%, var(--bg) 100%);
+      line-height: 1.6;
     }
-    a{color:var(--fg);text-decoration:none;}
-    .wrap{max-width:1000px;margin:0 auto;padding:48px 20px 88px;}
-    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;}
-    .mark{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;
-      background:conic-gradient(from 180deg,var(--accent),var(--accent-2),var(--accent));
-      color:#0b0f1a;font-size:22px;font-weight:900;}
-    nav a{margin-left:20px;opacity:.95;padding:10px 0;border-bottom:1px s
+    a { color: var(--fg); text-decoration: none; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 48px 20px 80px; }
+
+    header { display:flex; align-items:center; justify-content:space-between; margin-bottom: 32px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:800; }
+    .mark {
+      width:44px; height:44px; border-radius:12px; display:grid; place-items:center;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color:#0b0f1a; font-weight:900;
+    }
+    nav a { margin-left:18px; padding:8px 0; border-bottom:1px solid transparent; }
+    nav a:hover { border-color: var(--accent); }
+
+    .hero { margin: 8px 0 28px; }
+    .eyebrow {
+      display:inline-flex; align-items:center; gap:10px; padding:6px 10px;
+      border:1px solid var(--border); border-radius:999px; color: var(--muted);
+      background: rgba(15,22,39,.6); font-size:13px;
+    }
+    .dot { width:8px; height:8px; border-radius:50%; background: var(--accent); }
+
+    .title { font-size: clamp(28px, 5.8vw, 50px); line-height:1.1; font-weight:800; margin:14px 0 10px; }
+    .subtitle { color: var(--muted); font-size: clamp(16px, 2.5vw, 18px); max-width: 62ch; }
+
+    .cta { display:flex; flex-wrap:wrap; gap:12px; margin-top: 20px; }
+    .btn {
+      display:inline-flex; align-items:center; gap:10px; padding:11px 16px; border-radius:12px;
+      border:1px solid var(--border); background: linear-gradient(180deg, #14213a, #0f1a31);
+    }
+    .btn:hover { border-color: var(--accent); }
+    .btn.secondary { background: transparent; }
+
+    section { margin-top: 40px; }
+    .grid { display:grid; gap:16px; }
+    @media (min-width: 860px) { .cols-3 { grid-template-columns: repeat(3, 1fr); } .cols-2 { grid-template-columns: 1fr 1fr; } }
+
+    .card {
+      background: linear-gradient(180deg, rgba(16,22,39,.96), rgba(11,15,26,.96));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+    }
+    .card h3 { margin: 0 0 6px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    .pill {
+      display:inline-block; padding:6px 10px; border-radius:999px;
+      border:1px solid var(--border); background:#0e1a30; color:var(--fg); font-size:13px; margin:4px 6px 0 0;
+    }
+
+    footer { margin-top: 52px; padding-top: 16px; color: var(--muted); font-size: 14px; border-top:1px dashed var(--border); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="mark">dR</div>
+        <div>Dan&nbsp;Romeo</div>
+      </div>
+      <nav>
+        <a href="mailto:hello@danromeo.com">Email</a>
+        <a href="https://www.linkedin.com/in/danromeo" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <span class="eyebrow"><span class="dot"></span> Digital Growth & Product Strategy</span>
+        <h1 class="title">I help brands connect with the right people, convert them into customers, and turn those customers into loyal fans.</h1>
+        <p class="subtitle">I bring together experience in marketing, product, and audience strategy with a curiosity for how technology and AI can shape the next wave of customer experiences.</p>
+        <div class="cta">
+          <a class="btn" href="mailto:hello@danromeo.com"><span class="dot"></span> Get in touch</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/danromeo" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        </div>
+      </section>
+
+      <section>
+        <div class="grid cols-3">
+          <div class="card">
+            <h3>Growth Strategy</h3>
+            <p>Clarity over noise. I help teams focus on what matters, test fast, and scale what actually works.</p>
+          </div>
+          <div class="card">
+            <h3>Audience Intelligence</h3>
+            <p>Turning audience insight into direction. Who they are, what they need, and where to meet them.</p>
+          </div>
+          <div class="card">
+            <h3>Measurement that Matters</h3>
+            <p>KPIs with teeth. Honest analytics and simple loops that tie work to outcomes.</p>
+          </div>
+        </div>
+        <div style="margin-top:10px;">
+          <span class="pill">Segmentation</span>
+          <span class="pill">Web Analytics</span>
+          <span class="pill">Experimentation</span>
+          <span class="pill">Identity & Auth</span>
+          <span class="pill">Product-led Growth</span>
+          <span class="pill">Emerging Tech</span>
+        </div>
+      </section>
+
+      <section>
+        <div class="grid cols-2">
+          <div class="card">
+            <h3>Simple Wins Compound</h3>
+            <p>Reduce friction, tighten the message, ship improvements weekly. The compounding effect is real.</p>
+          </div>
+          <div class="card">
+            <h3>Data + Creativity</h3>
+            <p>Use numbers to inform the story, not replace it. Build for people, not dashboards.</p>
+          </div>
+          <div class="card">
+            <h3>Proven Impact</h3>
+            <p>From social logins to intent targeting and insights tools, I connect ideas to measurable results.</p>
+          </div>
+          <div class="card">
+            <h3>Always Learning</h3>
+            <p>Curious about practical innovation — from consumer tools to applied AI — when it improves real experiences.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="y"></span> Dan Romeo · <a href="mailto:hello@danromeo.com">hello@danromeo.com</a></div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
