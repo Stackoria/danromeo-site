@@ -3,152 +3,132 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dan Romeo — Digital Marketing & Product Strategy</title>
-  <meta name="description" content="Digital marketing & product strategy leader blending audience segmentation, web analytics, and innovation to drive measurable growth." />
+  <title>Dan Romeo — Digital Marketing & Product Innovation</title>
+  <meta name="description" content="Dan Romeo helps teams turn audience data into compounding growth—shipping fast, measuring clearly, and scaling what works across digital marketing and product innovation." />
+  <meta name="color-scheme" content="dark light" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Dan Romeo — Digital Marketing & Product Strategy" />
-  <meta property="og:description" content="Audience segmentation • Web analytics • Product strategy • Innovation" />
+  <meta property="og:title" content="Dan Romeo — Digital Marketing & Product Innovation" />
+  <meta property="og:description" content="Audience data → growth. Segmentation, analytics, identity, and experimentation—applied pragmatically." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://danromeo.com" />
-  <meta name="color-scheme" content="light dark" />
 
   <style>
-    :root {
-      --bg: #0f1521;
-      --fg: #e8edf6;
-      --muted: #aeb7c7;
-      --accent: #61d5d3;
-      --accent-2: #ff7a59;
-      --card: #151c2b;
-      --border: #24314a;
+    :root{
+      /* Palette */
+      --bg: #0b0f1a;          /* ink */
+      --card: #101627;        /* deep slate */
+      --ink-2:#0e1526;
+      --fg: #eef3ff;          /* near-white */
+      --muted:#a7b0c6;        /* soft cool gray */
+      --border:#1e2a44;       /* hairline */
+      --accent:#6ee0ff;       /* electric blue */
+      --accent-2:#9f7cff;     /* violet */
+      --pill:#0e1a30;
+
+      /* Sizing */
+      --wrap: 1040px;
+      --radius: 16px;
+      --radius-xl: 22px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
     }
 
     * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: radial-gradient(1200px 600px at 10% -10%, #172035 0%, transparent 60%), var(--bg);
+    html,body { height: 100%; }
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       color: var(--fg);
       line-height: 1.55;
+      background:
+        radial-gradient(900px 500px at 10% -10%, rgba(111,123,255,.15), transparent 60%),
+        radial-gradient(700px 500px at 90% 10%, rgba(110,224,255,.12), transparent 65%),
+        linear-gradient(180deg, var(--ink-2), var(--bg));
     }
-
     a { color: var(--fg); text-decoration: none; }
 
-    .wrap {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 48px 20px 80px;
+    .wrap{ max-width: var(--wrap); margin: 0 auto; padding: 48px 20px 88px; }
+
+    header{ display:flex; align-items:center; justify-content:space-between; margin-bottom: 36px; }
+    .brand{ display:flex; align-items:center; gap:14px; font-weight:800; letter-spacing:.2px; }
+    .mark{
+      display:grid; place-items:center;
+      width:48px; height:48px; border-radius:14px;
+      background: conic-gradient(from 180deg, var(--accent), var(--accent-2), var(--accent));
+      color:#0b0f1a; font-weight:900; font-size:22px;
+      box-shadow: 0 8px 24px rgba(110,224,255,.25), inset 0 0 0 1px rgba(255,255,255,.25);
+    }
+    nav a{ opacity:.95; margin-left:18px; padding:10px 0; border-bottom:1px solid transparent; }
+    nav a:hover{ border-color: var(--accent); }
+
+    .hero{ margin-top: 12px; margin-bottom: 28px; }
+    .eyebrow{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:6px 10px; border-radius:999px; border:1px solid var(--border); background: rgba(15,22,39,.6); color: var(--muted); font-size:13px;
+    }
+    .dot{ width:8px; height:8px; border-radius:50%; background: var(--accent); box-shadow:0 0 0 4px rgba(110,224,255,.15); }
+
+    .title{ font-size: clamp(30px, 5.8vw, 52px); line-height:1.08; font-weight: 800; letter-spacing:.1px; margin:12px 0 8px; }
+    .subtitle{ color:var(--muted); font-size: clamp(16px, 2.5vw, 18px); max-width: 60ch; }
+
+    .cta{ display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:12px 16px; border-radius:14px; border:1px solid var(--border);
+      background: linear-gradient(180deg, #14213a, #0f1a31);
+      box-shadow: var(--shadow);
+    }
+    .btn:hover{ border-color: var(--accent); box-shadow: 0 0 0 3px rgba(110,224,255,.18); }
+    .btn.secondary{ background: transparent; box-shadow:none; }
+
+    section{ margin-top: 42px; }
+    .grid{ display:grid; gap:16px; }
+    @media (min-width: 860px){ .cols-3{ grid-template-columns: repeat(3,1fr); } .cols-2{ grid-template-columns: 1fr 1fr; } }
+
+    .card{
+      background: linear-gradient(180deg, rgba(16,22,39,.9), rgba(11,15,26,.9));
+      border:1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow);
+    }
+    .card h3{ margin: 0 0 6px; font-size: 18px; }
+    .card p{ margin: 0; color: var(--muted); font-size: 15px; }
+
+    .pills{ margin-top:10px; }
+    .pill{
+      display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid var(--border);
+      background: var(--pill); color: var(--fg); font-size: 13px; margin:4px 6px 0 0;
     }
 
-    .logo { display: inline-flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .2px; }
-
-    .monogram {
-      display: grid;
-      place-items: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #0f1521;
-      font-weight: 800;
-      font-size: 22px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    }
-
-    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 36px; }
-
-    .links a {
-      opacity: .9;
-      margin-left: 16px;
-      padding: 8px 0;
-      border-bottom: 1px solid transparent;
-    }
-
-    .links a:hover { border-color: var(--accent); }
-
-    .hero { margin-top: 12px; margin-bottom: 28px; }
-    .title { font-size: clamp(28px, 5vw, 42px); font-weight: 800; line-height: 1.12; letter-spacing: .1px; }
-    .subtitle { margin-top: 10px; color: var(--muted); font-size: clamp(16px, 2.5vw, 18px); }
-
-    .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 16px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: linear-gradient(180deg, #18223a, #121a2c);
-    }
-    .btn:hover { border-color: var(--accent); box-shadow: 0 0 0 3px rgb(97 213 211 / 0.15); }
-    .btn.secondary { background: transparent; }
-    .btn .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 0 3px rgb(97 213 211 / 0.15);
-    }
-
-    section { margin-top: 40px; }
-    .grid { display: grid; gap: 16px; }
-    @media (min-width: 800px) {
-      .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
-      .grid.cols-2 { grid-template-columns: 1fr 1fr; }
-    }
-
-    .card {
-      background: linear-gradient(180deg, var(--card), #0f1521);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px;
-    }
-    .card h3 { margin: 0 0 6px; font-size: 18px; }
-    .card p { margin: 0; color: var(--muted); font-size: 15px; }
-
-    .pill {
-      display: inline-block;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: #121a2c;
-      color: var(--fg);
-      font-size: 13px;
-      margin: 4px 6px 0 0;
-    }
-
-    footer {
-      margin-top: 52px;
-      padding-top: 18px;
-      color: var(--muted);
-      font-size: 14px;
-      border-top: 1px dashed var(--border);
-    }
+    footer{ margin-top: 56px; padding-top: 18px; color: var(--muted); font-size:14px; border-top:1px dashed var(--border); }
+    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
   </style>
 </head>
-
 <body>
   <div class="wrap">
     <header>
-      <div class="logo">
-        <div class="monogram">dR</div>
+      <div class="brand">
+        <div class="mark">dR</div>
         <div>Dan&nbsp;Romeo</div>
       </div>
-      <nav class="links" aria-label="Top links">
+      <nav aria-label="Top links">
         <a href="mailto:hello@danromeo.com">Email</a>
         <a href="https://www.linkedin.com/in/danromeo" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="/Dan_Romeo_Resume.pdf" target="_blank" rel="noopener">Resume</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
-        <h1 class="title">Digital Marketing & Product Strategy</h1>
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="intro-title">
+        <span class="eyebrow"><span class="dot"></span> Digital Marketing · Product Innovation</span>
+        <h1 id="intro-title" class="title">I turn audience data into compounding growth.</h1>
         <p class="subtitle">
-          I connect audience segmentation, web analytics, and product thinking to drive measurable growth.
-          Passionate about emerging tech and practical innovation that improves customer experience.
+          I help teams ship fast, measure clearly, and scale what works. I’m broadening into end-to-end digital marketing and product innovation,
+          while bringing depth in segmentation, analytics, identity, and experimentation.
         </p>
         <div class="cta">
           <a class="btn" href="mailto:hello@danromeo.com"><span class="dot"></span> Get in touch</a>
@@ -156,60 +136,65 @@
         </div>
       </section>
 
-      <section>
+      <!-- What I Do -->
+      <section aria-labelledby="expertise-title">
+        <h2 id="expertise-title" class="sr-only">Core Expertise</h2>
         <div class="grid cols-3">
           <div class="card">
-            <h3>Digital Marketing Strategy</h3>
-            <p>Turning audience insights and analytics into focused plans that drive acquisition, engagement, and retention.</p>
+            <h3>Growth Strategy</h3>
+            <p>Turn insights into focused plans that drive acquisition, engagement, and retention across channels.</p>
           </div>
           <div class="card">
-            <h3>Audience Segmentation</h3>
-            <p>Designing taxonomies and segments that improve relevance and help teams activate the right message for the right users.</p>
+            <h3>Audience Systems</h3>
+            <p>Design taxonomies and segments that increase relevance and unlock efficient activation.</p>
           </div>
           <div class="card">
-            <h3>Web Analytics & Measurement</h3>
-            <p>Building KPI frameworks and experimentation loops to tie product and marketing work to outcomes.</p>
+            <h3>Measurement & Experimentation</h3>
+            <p>Define KPIs, implement clean analytics, and build test–learn loops tied to business results.</p>
           </div>
         </div>
-
-        <div style="margin-top:10px;">
+        <div class="pills">
           <span class="pill">Segmentation</span>
-          <span class="pill">Conversion & Funnels</span>
-          <span class="pill">Experimentation</span>
-          <span class="pill">Customer Journeys</span>
-          <span class="pill">Data Platforms</span>
-          <span class="pill">Emerging Tech</span>
+          <span class="pill">Web Analytics</span>
+          <span class="pill">CRO & Funnels</span>
+          <span class="pill">Identity & Auth</span>
+          <span class="pill">PLG</span>
+          <span class="pill">AI / Emerging Tech</span>
         </div>
       </section>
 
-      <section>
+      <!-- Proof Points (placeholder, non-NDA) -->
+      <section aria-labelledby="proof-title">
+        <h2 id="proof-title" class="sr-only">Selected Impact</h2>
         <div class="grid cols-2">
           <div class="card">
-            <h3>Audience Insights Platform</h3>
-            <p>Defined a next-gen internal insights tool surfacing engagement and overlap trends to inform targeting strategy and account planning.</p>
+            <h3>Friction ↓, Sign-ups ↑</h3>
+            <p>Shipped social logins and optimized auth flows, increasing registrations by 20%+.</p>
           </div>
           <div class="card">
             <h3>Intent Targeting MVP</h3>
-            <p>Delivered an MVP that recommended high-intent taxonomy groups and enabled activation, improving targeting efficiency and clarity of results.</p>
+            <p>Delivered a practical MVP that improved targeting efficiency and clarity of results.</p>
           </div>
           <div class="card">
-            <h3>Web Engagement Optimization</h3>
-            <p>Shipped auth and save-for-later enhancements that reduced friction and increased measurable session depth for signed-in users.</p>
+            <h3>Audience Insights</h3>
+            <p>Defined a next-gen internal tool surfacing engagement and overlap trends for smarter activation.</p>
           </div>
           <div class="card">
-            <h3>Data & Measurement Foundations</h3>
-            <p>Partnered with data teams to align metrics, create curated datasets, and build transparent reporting for product and marketing decisions.</p>
+            <h3>Data Foundations</h3>
+            <p>Aligned metrics, built curated datasets, and made reporting transparent for product and marketing.</p>
           </div>
         </div>
       </section>
 
-      <section>
+      <!-- About -->
+      <section aria-labelledby="about-title">
+        <h2 id="about-title" class="sr-only">About</h2>
         <div class="card">
           <h3>About Dan</h3>
           <p>
-            I’m a product-minded digital marketer who bridges strategy, data, and execution. My background spans
-            audience segmentation, web analytics, and building data-driven features that connect insight to impact.
-            I enjoy pragmatic innovation—shipping the smallest thing that proves value, then scaling what works.
+            I’m a product-minded digital marketer who bridges strategy, data, and execution. I like pragmatic
+            innovation—ship the smallest thing that proves value, then scale what works. I’ve led data and engagement
+            work at large publishers and I’m excited to apply that rigor to broader growth challenges.
           </p>
         </div>
       </section>
@@ -220,8 +205,6 @@
     </footer>
   </div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
